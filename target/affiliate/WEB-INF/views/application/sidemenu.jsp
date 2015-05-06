@@ -25,7 +25,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="updateFreelancerPassword.html">
+                        <a href="updatePassword.html">
                             <spring:message code="text25" />
                         </a>
                     </li>                    

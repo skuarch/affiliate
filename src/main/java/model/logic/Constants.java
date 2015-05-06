@@ -6,8 +6,12 @@ package model.logic;
  */
 public class Constants {
     
-    public static final short AFFILIATE = 1;
-    public static final short COMPANY = 2;
+    public static final short AFFILIATE = 1; //types for establishment
+    public static final short COMPANY = 2; //types for establishment
+    
+    public static final short PERSON_TYPE_AFFILIATE = 2;    
+    public static final short PERSON_TYPE_PARTNER = 8;
+    
     public static final int INTERVAL_SESSION_CHECK = 60000;
     public static final int INCREASE_COUNTER = 60;
     public static final String PATH_UPLOADS_TMP = "/opt/freelancer/uploads/";
@@ -28,6 +32,7 @@ public class Constants {
     //public static final String URI_FREELANCER_CREATE_AFFILIATE = "/affiliate/create";    
     
     public static final String URI_PARTNER_AFFILIATE_AUTHENTICATION = "/authentication/partner/affiliate";
+    public static final String URI_PARTNER_UPDATE_PASSWORD = "/partner/update/password";
     
     public static final String URI_AFFILIATE_CREATE = "/affiliate/create";
     public static final String URI_AFFILIATE_CREATE_ESTABLISHMENT = "/affiliate/create/establishment";

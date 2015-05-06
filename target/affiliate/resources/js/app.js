@@ -634,7 +634,7 @@ $("#updatePasswordForm").submit(function(event){
        $.ajax({ 
            cache:false,
            type:"post",
-           url:"updateFreelancerPasswordProcess.html",
+           url:"updatePasswordProcess.html",
            data:{currentPassword:$.md5(String(currentPassword)), newPassword:$.md5(String(newPassword)), newPassword2:$.md5(String(newPassword2))},
            success:function(data){
                checkAndShowErrorRequest(data);

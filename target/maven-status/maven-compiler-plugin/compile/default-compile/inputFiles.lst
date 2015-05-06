@@ -9,7 +9,6 @@
 /home/skuarch-lap/NetBeansProjects/affiliate/src/main/java/controllers/establishment/EstablishmentDetails.java
 /home/skuarch-lap/NetBeansProjects/affiliate/src/main/java/interceptors/Session.java
 /home/skuarch-lap/NetBeansProjects/affiliate/src/main/java/model/logic/Approved.java
-/home/skuarch-lap/NetBeansProjects/affiliate/src/main/java/controllers/freelancer/UpdateFreelancerPasswordProcess.java
 /home/skuarch-lap/NetBeansProjects/affiliate/src/main/java/controllers/cashier/UpdateCashierProccess.java
 /home/skuarch-lap/NetBeansProjects/affiliate/src/main/java/servlets/GlobalContext.java
 /home/skuarch-lap/NetBeansProjects/affiliate/src/main/java/controllers/affiliate/createEstablishmentProcess.java
@@ -32,7 +31,9 @@
 /home/skuarch-lap/NetBeansProjects/affiliate/src/main/java/controllers/establishment/CreateEstablishment.java
 /home/skuarch-lap/NetBeansProjects/affiliate/src/main/java/controllers/freelancer/CreateFreelancerProcess.java
 /home/skuarch-lap/NetBeansProjects/affiliate/src/main/java/controllers/application/OldBrowser.java
+/home/skuarch-lap/NetBeansProjects/affiliate/src/main/java/model/util/PersonBasicInformationUtil.java
 /home/skuarch-lap/NetBeansProjects/affiliate/src/main/java/model/net/RestClient.java
+/home/skuarch-lap/NetBeansProjects/affiliate/src/main/java/controllers/application/UpdatePasswordProcess.java
 /home/skuarch-lap/NetBeansProjects/affiliate/src/main/java/model/beans/Company.java
 /home/skuarch-lap/NetBeansProjects/affiliate/src/main/java/controllers/affiliate/UpdateAffiliateTaxInformationProcess.java
 /home/skuarch-lap/NetBeansProjects/affiliate/src/main/java/model/beans/User.java
@@ -40,7 +41,6 @@
 /home/skuarch-lap/NetBeansProjects/affiliate/src/main/java/controllers/cashier/CreateCashierFormProccess.java
 /home/skuarch-lap/NetBeansProjects/affiliate/src/main/java/controllers/application/Error.java
 /home/skuarch-lap/NetBeansProjects/affiliate/src/main/java/model/util/ApplicationUtil.java
-/home/skuarch-lap/NetBeansProjects/affiliate/src/main/java/controllers/freelancer/UpdateFreelancerPassword.java
 /home/skuarch-lap/NetBeansProjects/affiliate/src/main/java/controllers/cashier/UpdatePasswordCashier.java
 /home/skuarch-lap/NetBeansProjects/affiliate/src/main/java/controllers/company/CreateNewCompanyProcess.java
 /home/skuarch-lap/NetBeansProjects/affiliate/src/main/java/model/beans/AuthenticationBean.java
@@ -53,10 +53,10 @@
 /home/skuarch-lap/NetBeansProjects/affiliate/src/main/java/controllers/company/CompanyDetails.java
 /home/skuarch-lap/NetBeansProjects/affiliate/src/main/java/controllers/freelancer/UpdateFreelancerProcess.java
 /home/skuarch-lap/NetBeansProjects/affiliate/src/main/java/controllers/application/Logout.java
+/home/skuarch-lap/NetBeansProjects/affiliate/src/main/java/controllers/application/UpdatePassword.java
 /home/skuarch-lap/NetBeansProjects/affiliate/src/main/java/controllers/application/Redirector.java
 /home/skuarch-lap/NetBeansProjects/affiliate/src/main/java/controllers/cashier/CashierDetails.java
 /home/skuarch-lap/NetBeansProjects/affiliate/src/main/java/controllers/company/CompanyDetailsForm.java
-/home/skuarch-lap/NetBeansProjects/affiliate/src/main/java/model/beans/FreelancerBasic.java
 /home/skuarch-lap/NetBeansProjects/affiliate/src/main/java/controllers/affiliate/CreateNewAffiliateProcess.java
 /home/skuarch-lap/NetBeansProjects/affiliate/src/main/java/controllers/freelancer/CreateFreelancer.java
 /home/skuarch-lap/NetBeansProjects/affiliate/src/main/java/controllers/responsable/UpdateResponsableFormProccess.java
@@ -70,6 +70,7 @@
 /home/skuarch-lap/NetBeansProjects/affiliate/src/main/java/model/util/FileUtil.java
 /home/skuarch-lap/NetBeansProjects/affiliate/src/main/java/model/beans/Gender.java
 /home/skuarch-lap/NetBeansProjects/affiliate/src/main/java/controllers/establishment/EstablishmentDetailsForm.java
+/home/skuarch-lap/NetBeansProjects/affiliate/src/main/java/model/beans/PersonBasicInformation2.java
 /home/skuarch-lap/NetBeansProjects/affiliate/src/main/java/controllers/application/SystemWelcome.java
 /home/skuarch-lap/NetBeansProjects/affiliate/src/main/java/model/util/MD5Util.java
 /home/skuarch-lap/NetBeansProjects/affiliate/src/main/java/model/beans/Warehouse.java
@@ -80,6 +81,7 @@
 /home/skuarch-lap/NetBeansProjects/affiliate/src/main/java/controllers/application/TestNotification.java
 /home/skuarch-lap/NetBeansProjects/affiliate/src/main/java/controllers/application/Welcome.java
 /home/skuarch-lap/NetBeansProjects/affiliate/src/main/java/controllers/affiliate/UpdateAffiliateBankInformationProcess.java
+/home/skuarch-lap/NetBeansProjects/affiliate/src/main/java/model/beans/PersonBasicInformation.java
 /home/skuarch-lap/NetBeansProjects/affiliate/src/main/java/model/beans/Affiliate.java
 /home/skuarch-lap/NetBeansProjects/affiliate/src/main/java/controllers/establishment/CreateEstablishmentProccess.java
 /home/skuarch-lap/NetBeansProjects/affiliate/src/main/java/model/util/HandlerExceptionUtil.java
@@ -92,6 +94,5 @@
 /home/skuarch-lap/NetBeansProjects/affiliate/src/main/java/model/beans/TransactionType.java
 /home/skuarch-lap/NetBeansProjects/affiliate/src/main/java/model/beans/Cashier.java
 /home/skuarch-lap/NetBeansProjects/affiliate/src/main/java/model/beans/Category.java
-/home/skuarch-lap/NetBeansProjects/affiliate/src/main/java/model/util/FreelancerUtil.java
 /home/skuarch-lap/NetBeansProjects/affiliate/src/main/java/model/beans/EstablishmentType.java
 /home/skuarch-lap/NetBeansProjects/affiliate/src/main/java/model/beans/Freelancer.java
