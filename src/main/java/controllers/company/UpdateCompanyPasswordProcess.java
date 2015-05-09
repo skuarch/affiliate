@@ -55,7 +55,7 @@ public class UpdateCompanyPasswordProcess {
                     Constants.API_URL,
                     Constants.API_FIRST_VERSION,
                     Constants.URI_COMPANY_UPDATE_PASSWORD);
-            System.out.println("que mierdas " + json);
+            
             mav = new ModelAndView("application/json");
             jsono = new JSONObject(json);
             mav.addObject("json", jsono);

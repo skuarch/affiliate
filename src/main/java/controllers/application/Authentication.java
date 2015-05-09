@@ -111,6 +111,8 @@ public class Authentication extends BaseController {
     private void createSession(PersonBasicInformation p) {
         session.setAttribute("logged", "true");
         session.setAttribute("personBasicInformation", p);
+        session.setAttribute("affiliateId", p.getId());
+        session.setAttribute("partnerId", p.getId());
     }
 
 }

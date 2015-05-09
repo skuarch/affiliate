@@ -35,6 +35,7 @@ model/util/SessionUtil.class
 model/beans/AuthenticationBean.class
 model/util/PersonBasicInformationUtil.class
 controllers/responsable/UpdateResponsableFormProccess.class
+controllers/application/UpdatePasswordProcess.class
 model/util/ApplicationUtil.class
 model/beans/Location.class
 controllers/affiliate/AffiliateDetails.class
@@ -70,8 +71,10 @@ model/beans/Establishment.class
 controllers/application/Error404.class
 servlets/GlobalContext.class
 controllers/application/OldBrowser.class
+controllers/affiliate/Affiliation.class
 model/logic/NotificationBroadcast.class
 controllers/freelancer/CreateFreelancer.class
+model/beans/Administrator.class
 controllers/application/ScriptI18N.class
 controllers/application/Login.class
 model/beans/Contact.class
@@ -91,6 +94,7 @@ controllers/affiliate/CreateNewAffiliateProcess.class
 controllers/cashier/CreateCashierFormProccess.class
 controllers/affiliate/UpdateAffiliateBankInformationProcess.class
 model/beans/EstablishmentType.class
+controllers/affiliate/AffiliationDetails.class
 controllers/establishment/EstablishmentDetailsForm.class
 controllers/freelancer/UpdateFreelancerProcess.class
 controllers/affiliate/AffiliateDetailsForm.class

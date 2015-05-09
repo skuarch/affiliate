@@ -236,6 +236,9 @@ function getPathName(){
         case "companyDetails":
             companyDetailsAjax();
             break;
+        case "affiliation":
+            affiliationDetails();
+            break;
     }
 })();
 
@@ -2554,4 +2557,18 @@ function updateResponsablePassword(event){
         });
     }    
     
+}
+
+function affiliationDetails(){
+    $("#output").html(loader);
+    $.ajax({
+        url:"affiliationDetails.html",
+        success: function (data, textStatus, jqXHR) {
+            $("#output").html(data);
+            $(".selectpicker").selectpicker("refresh"); 
+            bindAffiliateDetailsForms();
+        },error: function (jqXHR, textStatus, errorThrown) {
+            showError();
+        }        
+    });
 }

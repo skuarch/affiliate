@@ -9,6 +9,7 @@
 /home/skuarch-lap/NetBeansProjects/affiliate/src/main/java/controllers/establishment/EstablishmentDetails.java
 /home/skuarch-lap/NetBeansProjects/affiliate/src/main/java/interceptors/Session.java
 /home/skuarch-lap/NetBeansProjects/affiliate/src/main/java/model/logic/Approved.java
+/home/skuarch-lap/NetBeansProjects/affiliate/src/main/java/controllers/affiliate/AffiliationDetails.java
 /home/skuarch-lap/NetBeansProjects/affiliate/src/main/java/controllers/cashier/UpdateCashierProccess.java
 /home/skuarch-lap/NetBeansProjects/affiliate/src/main/java/servlets/GlobalContext.java
 /home/skuarch-lap/NetBeansProjects/affiliate/src/main/java/controllers/affiliate/createEstablishmentProcess.java
@@ -63,6 +64,7 @@
 /home/skuarch-lap/NetBeansProjects/affiliate/src/main/java/controllers/affiliate/UpdateAffiliatePasswordProcess.java
 /home/skuarch-lap/NetBeansProjects/affiliate/src/main/java/controllers/company/CompanyList.java
 /home/skuarch-lap/NetBeansProjects/affiliate/src/main/java/controllers/affiliate/CreateNewAffiliate.java
+/home/skuarch-lap/NetBeansProjects/affiliate/src/main/java/controllers/affiliate/Affiliation.java
 /home/skuarch-lap/NetBeansProjects/affiliate/src/main/java/controllers/company/UpdateCompanyPasswordProcess.java
 /home/skuarch-lap/NetBeansProjects/affiliate/src/main/java/controllers/company/UpdateCompanyBankInformationProcess.java
 /home/skuarch-lap/NetBeansProjects/affiliate/src/main/java/controllers/company/UpdateCompanyTaxInformationProcess.java
@@ -89,6 +91,7 @@
 /home/skuarch-lap/NetBeansProjects/affiliate/src/main/java/controllers/company/UpdateCompanyBasicInformationProcess.java
 /home/skuarch-lap/NetBeansProjects/affiliate/src/main/java/controllers/affiliate/UpdateAffiliateBasicInformationProcess.java
 /home/skuarch-lap/NetBeansProjects/affiliate/src/main/java/controllers/application/BaseController.java
+/home/skuarch-lap/NetBeansProjects/affiliate/src/main/java/model/beans/Administrator.java
 /home/skuarch-lap/NetBeansProjects/affiliate/src/main/java/model/net/RestClientMultiPartFile.java
 /home/skuarch-lap/NetBeansProjects/affiliate/src/main/java/model/beans/PersonType.java
 /home/skuarch-lap/NetBeansProjects/affiliate/src/main/java/model/beans/TransactionType.java

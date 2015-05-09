@@ -1,5 +1,7 @@
+<%@page import="model.beans.PersonBasicInformation"%>
 <%@taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<% PersonBasicInformation pbi = (PersonBasicInformation) session.getAttribute("personBasicInformation"); %>
 <div class="navbar-default sidebar" role="navigation">
     <div class="sidebar-nav navbar-collapse">
         <ul class="nav" id="side-menu">            
@@ -7,7 +9,7 @@
                 <a href="systemWelcome.html">
                     <i class="fa fa-star fa-fw">                        
                     </i>
-                    <spring:message code="text23" />
+                    <spring:message code="text23" />                                        
                 </a>
             </li>
             <li>
@@ -32,6 +34,7 @@
                 </ul>
                 <!-- /.nav-second-level -->
             </li>
+            <% if (pbi.getPersonType() == 8) { %>
             <li>
                 <a href="#">
                     <i class="fa fa-group"></i> 
@@ -62,13 +65,21 @@
                 </ul>
                 <!-- /.nav-second-level -->
             </li>
+            <% } else { %>
+            <li>
+                <a href="affiliation.html">
+                    <i class="fa fa-list-alt fa-fw"></i> 
+                    <spring:message code="text349" />
+                </a>                
+            </li>
+            <% }%>
             <!-- <li>
                 <a href="forms.html">
                     <i class="fa fa-edit fa-fw"></i> 
-                    <spring:message code="text141" />
-                </a>                
-            </li>
-        </ul> -->
+            <spring:message code="text141" />
+        </a>                
+    </li>
+</ul> -->
     </div>
     <!-- /.sidebar-collapse -->
 </div>
