@@ -67,7 +67,7 @@ public class AffiliationDetails {
                     Constants.API_URL,
                     Constants.API_FIRST_VERSION,
                     Constants.URI_CATEGORY_GET);
-
+            
             jsona = new JSONArray(jsonCategories);
             categories = new Gson().fromJson(jsona.toString(), Category[].class);            
             
