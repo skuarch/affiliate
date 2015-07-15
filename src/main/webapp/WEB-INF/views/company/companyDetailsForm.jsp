@@ -2,6 +2,7 @@
 <%@taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
+<jsp:useBean id="cons" class="model.logic.Constants" />
 <jsp:include page="../application/noCache.jsp"/>
 
 <div class="panel panel-default">
@@ -75,7 +76,19 @@
                         <label><spring:message code="text344"/> </label>
                         <input name="logo" id="logo" placeholder="" maxlength="55" class="form-control" type="file" tabindex="8" />
                     </div> 
+                </div>                        
+                <div class="col-lg-6">
+                    <div class="form-group"> 
+                        <label>Website</label>
+                        <input name="website" id="website" value="${company.getWebsite()}" class="form-control" type="text" maxlength="500" tabindex="9" />
+                    </div> 
                 </div>
+                <div class="col-lg-6">
+                    <div class="form-group"> 
+                        <label>Facebook</label>
+                        <input name="facebook" id="facebook" value="${company.getFacebook()}" class="form-control" type="text" maxlength="500" tabindex="10" />
+                    </div> 
+                </div>               
                 <div class="col-lg-12">
                     <div class="form-group">
                         <label><spring:message code="text342" /></label>                                                
@@ -267,6 +280,9 @@
                                     <button type="button" class="btn btn-primary btn-block" onclick="javascript:redirectData('redirector.html', {url: 'establishmentDetails.html', establishmentId:${e.getId()}})">                                        
                                         <spring:message code="text240" />
                                     </button>
+                                    <button type="button" class="btn btn-danger" onclick="javascript:deleteEstablishment(${e.getId()}, companyDetailsAjax)">
+                                        <spring:message code="text350" />
+                                    </button>
                                 </td>
                             </tr>
                         </c:forEach>
@@ -274,6 +290,9 @@
                 </table>
             </c:otherwise>
         </c:choose>
+        <button class="btn btn-primary btn-block btn-lg" onclick="javascript:redirectData('redirector.html', {url: 'createEstablishment.html', companyId:${company.getId()}, type: <c:out value="${cons.getCompany()}"/>})">
+            <spring:message code="text234" />
+        </button>
     </div>
 </div>
 <div class="modal fade" id="DetailModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">

@@ -30,6 +30,10 @@ public class Company implements Serializable {
     private List<Establishment> establishment;
     private List<Category> category = new ArrayList<>();
     private String registrationDate = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date());
+    private String website;
+    private String facebook;
+    private byte approved = 0;    
+    private String lastLogin = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date());
 
     private byte isSoftDeleted = 0;
 
@@ -183,6 +187,38 @@ public class Company implements Serializable {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public String getWebsite() {
+        return website;
+    }
+
+    public void setWebsite(String website) {
+        this.website = website;
+    }
+
+    public String getFacebook() {
+        return facebook;
+    }
+
+    public void setFacebook(String facebook) {
+        this.facebook = facebook;
+    }
+
+    public byte getApproved() {
+        return approved;
+    }
+
+    public void setApproved(byte approved) {
+        this.approved = approved;
+    }
+
+    public String getLastLogin() {
+        return lastLogin;
+    }
+
+    public void setLastLogin(String lastLogin) {
+        this.lastLogin = lastLogin;
     }
 
 }

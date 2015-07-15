@@ -34,40 +34,42 @@
                 </ul>
                 <!-- /.nav-second-level -->
             </li>
-            <% if (pbi.getPersonType() == 8) { %>
+            <% if (pbi.getPersonType() == 8) { %>            
             <li>
-                <a href="#">
-                    <i class="fa fa-group"></i> 
-                    <spring:message code="text140" />
-                    <span class="fa arrow"></span>
+                <a href="createNewAffiliate.html">
+                    <spring:message code="text147" />
                 </a>
-                <ul class="nav nav-second-level">
-                    <li>
-                        <a href="createNewAffiliate.html">
-                            <spring:message code="text147" />
-                        </a>
-                    </li>
-                    <li>
-                        <a href="createNewCompanyAffiliate.html">
-                            <spring:message code="text163" />
-                        </a>
-                    </li>
-                    <li>
-                        <a href="affiliatesList.html">
-                            <spring:message code="text155" />
-                        </a>
-                    </li>
-                    <li>
-                        <a href="companiesList.html">
-                            <spring:message code="text285" />
-                        </a>
-                    </li>
-                </ul>
-                <!-- /.nav-second-level -->
             </li>
-            <% } else { %>
+            <li>
+                <a href="createNewCompanyAffiliate.html">
+                    <spring:message code="text163" />
+                </a>
+            </li>
+            <li>
+                <a href="affiliatesList.html">
+                    <spring:message code="text155" />
+                </a>
+            </li>
+            <li>
+                <a href="companiesList.html">
+                    <spring:message code="text285" />
+                </a>
+            </li>
+
+            <!-- /.nav-second-level -->
+            </li>
+            <% } %>
+            <% if (pbi.getPersonType() == 2) { %>            
             <li>
                 <a href="affiliation.html">
+                    <i class="fa fa-list-alt fa-fw"></i> 
+                    <spring:message code="text349" />
+                </a>                
+            </li>
+            <% }%>
+            <% if (pbi.getPersonType() == 6) { %>            
+            <li>
+                <a href="companyDetails.html">
                     <i class="fa fa-list-alt fa-fw"></i> 
                     <spring:message code="text349" />
                 </a>                

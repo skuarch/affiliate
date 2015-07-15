@@ -42,7 +42,7 @@ public class CompanyListTable extends BaseController {
         Company[] companies = null;
         
         try {
-
+            
             mav = new ModelAndView("company/companyListTable");
             personBasicInformation = PersonBasicInformationUtil.getPersonBasicInformation(session);
             parameters = PersonBasicInformationUtil.createHashMapGetAffiliatesbyCreator(personBasicInformation.getPersonId());
@@ -51,7 +51,7 @@ public class CompanyListTable extends BaseController {
                     parameters,
                     Constants.API_URL,
                     Constants.API_FIRST_VERSION,
-                    Constants.URI_FREELANCER_GET_COMPANIES
+                    Constants.URI_COMPANY_GET_BY_CREATOR
             );
             
             companies = new Gson().fromJson(json, Company[].class);

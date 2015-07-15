@@ -19,9 +19,10 @@ public class Constants {
     public static final int READ_TIMEOUT = 2000;
     public static final int MAX_FILE_SIZE_UPLOAD = 1048576; // 1 mb
     
-    public static final String API_URL = "https://192.168.1.12/api-rec";
+    public static final String API_URL = "https://localhost/api-rec";
     public static final String API_FIRST_VERSION = "/v1";
     public static final String URI_AUTHENTICATION = "/authentication";
+    
     
     public static final String URI_FREELANCER_CREATE = "/freelancer/create";    
     public static final String URI_FREELANCER_AUTHENTICATION = "/authentication/freelancer";
@@ -44,12 +45,14 @@ public class Constants {
     public static final String URI_AFFILIATE_LIST = "/affiliate/list";
     public static final String URI_AFFILIATE_GET = "/affiliate/get";
     public static final String URI_AFFILIATE_GET_LIST_BY_CREATOR = "/affiliate/get/list/by/creator";
+    public static final String URI_AFFILIATE_ACCEPT_TERMS = "/affiliate/accept/terms";
     
     public static final String URI_CATEGORY_GET = "/category/get";    
     
     public static final String URI_ESTABLISHMENT_CREATE = "/establishment/create"; 
     public static final String URI_ESTABLISHMENT_GET = "/establishment/get"; 
     public static final String URI_ESTABLISHMENT_UPDATE = "/establishment/update"; 
+    public static final String URI_ESTABLISHMENT_DELETE = "/establishment/delete"; 
     
     public static final String URI_RESPONSABLE_UPDATE = "/responsable/update"; 
     public static final String URI_RESPONSABLE_UPDATE_PASSWORD = "/responsable/update/password"; 
@@ -66,6 +69,8 @@ public class Constants {
     public static final String URI_COMPANY_UPDATE_TAX_INFORMATION = "/company/update/tax/information";
     public static final String URI_COMPANY_UPDATE_BANK_INFORMATION = "/company/update/bank/information";
     public static final String URI_COMPANY_UPDATE_PASSWORD = "/company/update/password";
+    public static final String URI_COMPANY_GET_BY_CREATOR = "/company/get/by/creator/";   
+    public static final String URI_COMPANY_ACCEPT_TERMS = "/company/accept/terms";
 
     public static short getAFFILIATE() {
         return AFFILIATE;

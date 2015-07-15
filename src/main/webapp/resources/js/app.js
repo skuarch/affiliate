@@ -680,6 +680,8 @@ $("#createNewAffiliate").submit(function(event){
     var gender = $("#gender").val();   
     var brand = $("#brand").val();
     var category = $("#category").val();    
+    var website = $("#website").val();    
+    var facebook = $("#facebook").val();    
     var description = $("#description").val();    
     
     var taxContactName = $("#taxContactName").val();
@@ -779,7 +781,7 @@ $("#createNewAffiliate").submit(function(event){
         error += "<br>" + text112;
     }    
 
-    if (taxId.length != 13) {
+    if (taxId.length < 12 || taxId.length < 13) {
         error += "<br>" + text273;
     }
     
@@ -843,6 +845,8 @@ $("#createNewAffiliate").submit(function(event){
                 formData.append("person.gender.id", gender);
                 formData.append("brand", brand);
                 formData.append("category", category);
+                formData.append("website", website);
+                formData.append("facebook", facebook);
                 formData.append("description", description);
                 formData.append('logo', logo);       
                 formData.append("tax.contact.person.name", taxContactName);
@@ -1612,7 +1616,9 @@ $("#createNewCompanyForm").submit(function(event){
     var contactEmail = $("#contactEmail").val();    
     var category = $("#category").val();    
     var password = $("#password").val();
-    var password2 = $("#password2").val();        
+    var password2 = $("#password2").val();            
+    var website = $("#website").val();    
+    var facebook = $("#facebook").val();        
     var description = $("#description").val();        
     
     var taxContactName = $("#taxContactName").val();
@@ -1691,7 +1697,7 @@ $("#createNewCompanyForm").submit(function(event){
         error += "<br>" + text284;
     }    
 
-    if (taxId.length != 13) {
+    if (taxId.length < 12 || taxId.length < 13) {
         error += "<br>" + text273;
     }
     
@@ -1756,6 +1762,8 @@ $("#createNewCompanyForm").submit(function(event){
                 formData.append("person.email", contactEmail);
                 formData.append("category", category);
                 formData.append("password", $.md5(String(password)));
+                formData.append("website", website);
+                formData.append("facebook", facebook);
                 formData.append("description", description);
                 formData.append('logo', logo);       
                 
@@ -1821,6 +1829,8 @@ function updateAffiliateBasicInformationFormSubmit(event){
     var gender = $("#gender").val();
     var brand = $("#brand").val();
     var category = $("#category").val();
+    var website = $("#website").val();
+    var facebook = $("#facebook").val();
     var description = $("#description").val();
 
     if (name.length < 2) {
@@ -1889,6 +1899,8 @@ function updateAffiliateBasicInformationFormSubmit(event){
                         formData.append("brand", brand);
                         formData.append("category", category);
                         formData.append('logo', logo);       
+                        formData.append("website", website);
+                        formData.append("facebook", facebook);
                         formData.append("description", description);
                     },
                     success: function (data) {
@@ -1948,7 +1960,7 @@ function updateAffiliateTaxFormSubmit(event){
         error += "<br>" + text112;
     }    
 
-    if (taxId.length != 13) {
+    if (taxId.length < 12 || taxId.length < 13) {
         error += "<br>" + text273;
     }
     
@@ -2128,6 +2140,8 @@ function updateCompanyBasicInformationFormSubmit(event){
     var contactPhone = $("#contactPhone").val();
     var contactEmail = $("#contactEmail").val();
     var category = $("#category").val();
+    var website = $("#website").val();   
+    var facebook = $("#facebook").val();    
     var description = $("#description").val();    
 
     if (name.length < 2) {
@@ -2181,6 +2195,8 @@ function updateCompanyBasicInformationFormSubmit(event){
                         formData.append("person.email", contactEmail);
                         formData.append("category", category);
                         formData.append('logo', logo);       
+                        formData.append("website", website);
+                        formData.append("facebook", facebook);
                         formData.append("description", description);
                     },
                     success: function (data) {
@@ -2239,7 +2255,7 @@ function updateCompanyTaxFormSubmit(event){
         error += "<br>" + text289;
     }    
 
-    if (taxId.length != 13) {
+    if (taxId.length < 12 || taxId.length < 13) {
         error += "<br>" + text273;
     }
     
@@ -2572,3 +2588,54 @@ function affiliationDetails(){
         }        
     });
 }
+
+
+function deleteEstablishment(establishmentId, func){
+    
+    if(isNaN(establishmentId)){
+        return;
+    }
+    
+    alertify.confirm(text290, function (e) {
+        if (e) {
+           $.ajax({
+               url:"deleteEstablishmentProcess.html",
+               type:"post",
+               cache:false,
+               data:{establishmentId:establishmentId},
+               beforeSend: function (xhr) {
+                    $.isLoading({text: loader, position: "overlay"})                        
+               }, success: function (data, textStatus, jqXHR) {
+                    checkAndShowErrorRequest(data);
+                    if (data.deleted === true) {
+                        showSuccess();     
+                        func();
+                    }
+               }, error: function (jqXHR, textStatus, errorThrown) {
+                   showError();
+               }, complete: function (jqXHR, textStatus) {
+                   $.isLoading("hide");
+               }
+            });  
+        } 
+    });    
+}
+
+$("#accept").click(function(event){
+    $.isLoading({text: loader, position: "overlay"})                        
+    $.ajax({
+        url:'acceptTerms.html',
+        type:'post',
+        cache: false, 
+        data:{},
+        success: function (data, textStatus, jqXHR) {
+            checkAndShowErrorRequest(data);
+            if (data.accept === true) {
+                alertify.success(text291);
+                $.redirect('redirector.html', {'url':'systemWelcome.html'},'POST');
+            }
+        },error: function (jqXHR, textStatus, errorThrown) {
+           showError();                                                                                                                             
+        }
+    });
+});

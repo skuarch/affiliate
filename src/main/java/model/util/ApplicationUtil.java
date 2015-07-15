@@ -21,6 +21,8 @@ public class ApplicationUtil {
             short personGenderId,
             String brand,
             String category,
+            String website,
+            String facebook,
             String description,
             String taxContactPersonName,
             String taxContactPersonLastName,
@@ -57,6 +59,8 @@ public class ApplicationUtil {
             for (int i = 0; i < cat.length; i++) {
                 hm.put("category[" + i + "].id", cat[i]);
             }
+            hm.put("website", website);
+            hm.put("facebook", facebook);
             hm.put("description", description);
 
             hm.put("contact.person.name", String.valueOf(taxContactPersonName));
@@ -98,6 +102,8 @@ public class ApplicationUtil {
             String personEmail,
             String category,
             String password,
+            String website,
+            String facebook,
             String description,
             String taxContactPersonName,
             String taxContactPersonLastName,
@@ -134,6 +140,8 @@ public class ApplicationUtil {
                 hm.put("category[" + i + "].id", cat[i]);
             }
             hm.put("password", MD5Util.getHash(String.valueOf(password)));
+            hm.put("website", website);
+            hm.put("facebook", facebook);
             hm.put("description", description);
             
             hm.put("contact.person.name", taxContactPersonName);
@@ -217,7 +225,9 @@ public class ApplicationUtil {
             short personGenderId,
             String personPhone,
             String personEmail,
-            String category,            
+            String category, 
+            String website, 
+            String facebook, 
             String description
             
     ) throws Exception {
@@ -238,6 +248,8 @@ public class ApplicationUtil {
             for (int i = 0; i < cat.length; i++) {
                 hm.put("category[" + i + "].id", cat[i]);
             }            
+            hm.put("website", website);
+            hm.put("facebook", facebook);
             hm.put("description", description);
 
         } catch (Exception e) {
@@ -392,6 +404,8 @@ public class ApplicationUtil {
             short personGenderId,
             String brand,
             String category,
+            String website,
+            String facebook,
             String description
     ) throws Exception {
 
@@ -413,6 +427,8 @@ public class ApplicationUtil {
                 hm.put("category[" + i + "].id", cat[i]);
             }
 
+            hm.put("website", website);
+            hm.put("facebook", facebook);
             hm.put("description", description);
             
         } catch (Exception e) {

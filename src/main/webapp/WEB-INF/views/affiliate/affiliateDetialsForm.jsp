@@ -8,6 +8,7 @@
 <%@taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
+<jsp:useBean id="cons" class="model.logic.Constants" />
 <jsp:include page="../application/noCache.jsp"/>
 
 <div class="row">
@@ -77,6 +78,18 @@
                                 <input name="logo" id="logo" placeholder="" maxlength="55" class="form-control" type="file" tabindex="8" />
                             </div> 
                         </div>
+                        <div class="col-lg-6">
+                            <div class="form-group"> 
+                                <label>Website</label>
+                                <input name="website" id="website" value="${affiliate.getWebsite()}" class="form-control" type="text" maxlength="500" tabindex="9" />
+                            </div> 
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="form-group"> 
+                                <label>Facebook</label>
+                                <input name="facebook" id="facebook" value="${affiliate.getFacebook()}" class="form-control" type="text" maxlength="500" tabindex="10" />
+                            </div> 
+                        </div>  
                         <div class="col-lg-12">
                             <div class="form-group">
                                 <label><spring:message code="text342" /></label>                                                
@@ -236,10 +249,11 @@
             <div class="panel-heading">
                 Establishments
             </div>
-            <div class="panel-body">
+            <div class="panel-body">                
                 <c:choose>
                     <c:when test="${fn:length(affiliate.getEstablishment()) <= 0}">
                         <spring:message code="text224"/>
+                        <br/>                        
                     </c:when>
                     <c:otherwise>
                         <table class="table table-bordered table-striped table-hover">
@@ -266,8 +280,11 @@
                                             ${e.getRegistrationDate()}
                                         </td>
                                         <td>
-                                            <button type="button" class="btn btn-primary btn-block" onclick="javascript:redirectData('redirector.html', {url: 'establishmentDetails.html', establishmentId:${e.getId()}})">                                        
+                                            <button type="button" class="btn btn-primary" onclick="javascript:redirectData('redirector.html', {url: 'establishmentDetails.html', establishmentId:${e.getId()}})">                                        
                                                 <spring:message code="text240" />
+                                            </button>
+                                            <button type="button" class="btn btn-danger" onclick="javascript:deleteEstablishment(${e.getId()}, affiliateDetailsForm)">
+                                                <spring:message code="text350" />
                                             </button>
                                         </td>
                                     </tr>
@@ -276,6 +293,9 @@
                         </table>
                     </c:otherwise>
                 </c:choose>
+                <button class="btn btn-primary btn-block btn-lg" onclick="javascript:redirectData('redirector.html', {url: 'createEstablishment.html', affiliateId:${affiliate.getId()}, type: <c:out value="${cons.getAffiliate()}"/>});">
+                    <spring:message code="text234" />
+                </button>                                
             </div>
         </div>
     </div>

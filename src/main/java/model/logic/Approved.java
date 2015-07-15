@@ -27,6 +27,7 @@ public class Approved {
         urls.put("createFreelancer", "createFreelancer");        
         urls.put("createFreelancerProcess", "createFreelancerProcess");        
         urls.put("redirector", "redirector");        
+        //urls.put("privacyPolitics", "privacyPolitics");        
         //urls.put("testNotifications", "testNotifications");                
         //urls.put("testNotificationsForm", "testNotificationsForm");                
     }

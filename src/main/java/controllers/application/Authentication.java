@@ -46,7 +46,7 @@ public class Authentication extends BaseController {
         JSONObject jsonReturn = null;
         String tmp = null;
         PersonBasicInformation personBasicInformation = null;        
-
+        
         try {
 
             setHeaderNoChache(response);
@@ -116,7 +116,9 @@ public class Authentication extends BaseController {
         session.setAttribute("logged", "true");
         session.setAttribute("personBasicInformation", p);
         session.setAttribute("affiliateId", p.getId());
-        session.setAttribute("partnerId", p.getId());
+        session.setAttribute("partnerId", p.getId());  
+        session.setAttribute("companyId", p.getId());
+        session.setAttribute("approved", (int) p.getApproved());
     }
 
 }

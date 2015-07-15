@@ -27,6 +27,9 @@ public class PersonBasicInformation implements Serializable {
     private long personType;
     private boolean isPartner;
     private boolean isAffiliate;
+    private boolean isCompany;
+    private byte approved = 0;
+    private byte active = 0;
 
     public PersonBasicInformation() {
     }
@@ -181,6 +184,30 @@ public class PersonBasicInformation implements Serializable {
 
     public void setPersonType(long personType) {
         this.personType = personType;
+    }
+
+    public byte getApproved() {
+        return approved;
+    }
+
+    public void setApproved(byte approved) {
+        this.approved = approved;
+    }
+
+    public byte getActive() {
+        return active;
+    }
+
+    public void setActive(byte active) {
+        this.active = active;
+    }
+
+    public boolean isIsCompany() {
+        return isCompany;
+    }
+
+    public void setIsCompany(boolean isCompany) {
+        this.isCompany = isCompany;
     }
 
 }

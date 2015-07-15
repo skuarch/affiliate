@@ -37,7 +37,7 @@ public class Profile extends BaseController {
             
             personBasicInformation = (PersonBasicInformation) session.getAttribute("personBasicInformation");
             mav.addObject("personBasicInformation", personBasicInformation);            
-            System.out.println("chanclas " + personBasicInformation.getGender());  
+            
         } catch (Exception e) {
             HandlerExceptionUtil.alert(mav, messageSource, e, logger, locale);
         }
